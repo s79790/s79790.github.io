@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nuraisyah – Student Bento Grid</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f7f9fb;
+      --card-bg: #ffffff;
+      --border: #e5e9f0;
+      --text-primary: #0f172a;
+      --text-secondary: #64748b;
+      --accent: #0b3c5d; /* Ocean Blue */
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-primary);
+      padding: 24px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: minmax(120px, auto);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Grid sizing */
+    .profile {
+      grid-column: span 6;
+      grid-row: span 2;
+    }
+
+    .location {
+      grid-column: span 3;
+    }
+
+    .hobby {
+      grid-column: span 3;
+    }
+
+    .tech {
+      grid-column: span 4;
+    }
+
+    .case-study {
+      grid-column: span 4;
+    }
+
+    .playlist {
+      grid-column: span 12;
+    }
+
+    /* Profile styling */
+    .profile h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .profile .meta {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    .profile .tagline {
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .socials {
+      display: flex;
+      gap: 12px;
+      margin-top: auto;
+    }
+
+    .socials span {
+      font-size: 0.85rem;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--accent);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .profile,
+      .location,
+      .hobby,
+      .tech,
+      .case-study,
+      .playlist {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Profile -->
+    <div class="card profile">
+      <div>
+        <h1>Nuraisyah</h1>
+        <div class="meta">Soil Science • Year 2</div>
+        <div class="tagline">“Innovating food safety.”</div>
+        <p>
+          Undergraduate student with a strong interest in laboratory analysis,
+          microbiology, and data-driven approaches to food and soil research.
+        </p>
+      </div>
+      <div class="socials">
+        <span>LinkedIn</span>
+        <span>GitHub</span>
+        <span>UMT Portal</span>
+      </div>
+    </div>
+
+    <!-- Location -->
+    <div class="card location">
+      <h2>Location</h2>
+      <p>
+        Universiti Malaysia Terengganu (UMT)<br/>
+        Kuala Nerus
+      </p>
+    </div>
+
+    <!-- Hobby -->
+    <div class="card hobby">
+      <h2>Hobby</h2>
+      <p>
+        Evening walks at Pantai UMT, enjoying the ocean breeze
+        and campus surroundings.
+      </p>
+    </div>
+
+    <!-- Subjects -->
+    <div class="card tech">
+      <h2>Subjects & Skills</h2>
+      <p>
+        • Soil Science<br/>
+        • Microbiology<br/>
+        • Excel<br/>
+        • Lab Analysis
+      </p>
+    </div>
+
+    <!-- Case Study -->
+    <div class="card case-study">
+      <h2>Case Study</h2>
+      <p>
+        <strong>Starch Gelatinization in Local Kuih</strong><br/>
+        Analyzing texture profiles of Kuih Lapis through controlled
+        lab experiments.
+      </p>
+    </div>
+
+    <!-- Playlist -->
+    <div class="card playlist">
+      <h2>Playlist</h2>
+      <p>
+        Placeholder for a calming study playlist or embedded music player,
+        ideal for lab work and late-evening revisions.
+      </p>
+    </div>
+
+  </div>
+
+</body>
+</html>
